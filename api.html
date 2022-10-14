@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+</body>
+
+<script>
+  
+  /////////////////Display all products/////////////////
+  fetch("https://fakestoreapi.com/products", {
+      method: "get",
+    })
+
+    .then((res) => res.json()) 
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+
+
+  /////////////////Add a new product/////////////////
+  /*
+    const body={
+      id: 21,
+      title: "Best Kitchen Supplies",
+      price: 30,
+      category: "tools",
+      description: "High Quality Kitchen Supplies",
+      rating: 4.3,
+      image: "https://picsum.photos/200",
+    };
+
+    fetch("https://fakestoreapi.com/products", {
+      method: "post",
+      body: JSON.stringify(body),
+    })
+
+    .then((res) => res.json()) 
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+*/
+
+/////////////////Update a product/////////////////
+
+/*
+const body2={
+      title: "Best Furniture",
+      price: 90,
+      category: "decoration",
+      description: "High Quality Furniture",
+      image: "https://picsum.photos/204",
+    };
+
+    fetch("https://fakestoreapi.com/products/7", {
+      method: "put",
+      body: JSON.stringify(body2),
+    })
+
+    .then((res) => res.json()) 
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+*/
+
+/////////////////Delete a product/////////////////
+
+/*
+fetch("https://fakestoreapi.com/products/6", {
+      method: "delete",
+    })
+
+    .then((res) => res.json()) 
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+*/
+
+</script>
+</html>
